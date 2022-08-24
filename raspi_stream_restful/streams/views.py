@@ -178,6 +178,7 @@ class StreamStopAPIView(APIView):
         # gstreamer streaming stop
         gstWrapper = gStreamerWrapper.instance()
         result = gstWrapper.StreamingStop()
+        time.sleep(1)
         gstWrapper.CaptureLastImage()
         print("StreamingStop %s" % result)
         if result != Error.Success:
@@ -213,8 +214,8 @@ class LastImageView(APIView):
             return JsonResponse(
                 {"error": "LastImage is not found", "code": Error.Store_Inviled_FilePath.value}, status=400
             )
-        response = FileResponse(lastImage)
-        return response
+        responseLastImage = FileResponse(lastImage)
+        return responseLastImage
 
 
 class StoreFileViewSet(viewsets.ModelViewSet):

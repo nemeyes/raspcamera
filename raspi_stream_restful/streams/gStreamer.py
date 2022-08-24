@@ -209,7 +209,7 @@ class StreamServer:
 
         if self.device == "picam":
             launch_str = (
-                "( rpicamsrc sensor-mode=1920x1080 preview=false bitrate="
+                "( rpicamsrc sensor-mode=2592x1944-fast preview=false bitrate="
                 # "( rpicamsrc sensor-mode=1920x1080 inline-headers=true preview=false bitrate="
                 + str(self.bitrate)
                 + " keyframe-interval="
@@ -844,7 +844,7 @@ class gStreamerWrapper(SingletonInstane):
 
         cmd = (
             "gst-launch-1.0 "
-            + "rpicamsrc num-buffers=10 keyframe-interval=1"
+            + "rpicamsrc sensor-mode=2592x1944-fast num-buffers=10 keyframe-interval=1"
             + " ! image/jpeg, framerate=30/1, width="
             + str(self.width)
             + ", height="
