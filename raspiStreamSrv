@@ -1,0 +1,26 @@
+#!/bin/bash
+### BEGIN INIT INFO
+# Provides:          raspiStream
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: raspi rtsp media streaming 
+# Description:       raspi rtsp media streaming and Restful API
+### END INIT INFO
+PATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
+
+
+case "$1" in
+        start)
+                ./home/pi/raspistream/raspi_stream_restful/startserver.sh
+        ;;
+        stop)
+                ./home/pi/raspistream/raspi_stream_restful/killserver.sh
+        ;;
+        *)
+                echo "Usage {start|stop}"
+        exit 1
+        ;;
+esac
+exit 0

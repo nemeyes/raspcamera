@@ -1,0 +1,283 @@
+{
+	"info": {
+		"_postman_id": "49ad6e00-8d4b-42e7-9b0e-e5a005adba20",
+		"name": "respistreamapis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "stream start get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "requestid",
+							"value": "temp22",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "width",
+							"value": "1920",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "height",
+							"value": "1080",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "fps",
+							"value": "30",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{SEND_IP}}:8000/api/stream/start?requestid=test&width=1280&height=720",
+					"protocol": "http",
+					"host": [
+						"{{SEND_IP}}"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"stream",
+						"start"
+					],
+					"query": [
+						{
+							"key": "requestid",
+							"value": "test"
+						},
+						{
+							"key": "width",
+							"value": "1280"
+						},
+						{
+							"key": "height",
+							"value": "720"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "store start get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "requestid",
+							"value": "temp22",
+							"type": "text"
+						},
+						{
+							"key": "targetport",
+							"value": "6000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{SEND_IP}}:8000/api/stream/storestart?name=20100",
+					"protocol": "http",
+					"host": [
+						"{{SEND_IP}}"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"stream",
+						"storestart"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "20100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "store stop get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "requestid",
+							"value": "temp22",
+							"type": "text"
+						},
+						{
+							"key": "targetport",
+							"value": "6000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{SEND_IP}}:8000/api/stream/storestop",
+					"protocol": "http",
+					"host": [
+						"{{SEND_IP}}"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"stream",
+						"storestop"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "stream stop get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "c7976bd8-5ddd-4487-87e6-8660d682c21a",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "e50a663d-68ab-46a3-bee2-2d88b2a0ea9p",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{SEND_IP}}:8000/api/stream/stop",
+					"protocol": "http",
+					"host": [
+						"{{SEND_IP}}"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"stream",
+						"stop"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "stream status",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "c7976bd8-5ddd-4487-87e6-8660d682c21a",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "e50a663d-68ab-46a3-bee2-2d88b2a0ea9p",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{SEND_IP}}:8000/api/stream/info",
+					"protocol": "http",
+					"host": [
+						"{{SEND_IP}}"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"stream",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "stream last image",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "c7976bd8-5ddd-4487-87e6-8660d682c21a",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "e50a663d-68ab-46a3-bee2-2d88b2a0ea9p",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{SEND_IP}}:8000/api/stream/lastimage",
+					"protocol": "http",
+					"host": [
+						"{{SEND_IP}}"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"stream",
+						"lastimage"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
